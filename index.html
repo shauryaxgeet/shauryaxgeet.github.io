@@ -50,6 +50,15 @@
   .insta { color:#fff; background:linear-gradient(90deg, #f58529, #dd2a7b 50%, #8134af); box-shadow:0 8px 22px rgba(221,42,123,.3); }
   .insta:active { transform:scale(.98); }
   .handle { margin-top:10px; font-size:14px; color:var(--muted); }
+  .events { margin-top:38px; text-align:left; }
+  .events h2 { text-align:center; font-family:"Didot","Bodoni 72","Playfair Display",Georgia,serif; font-weight:400; font-size:30px; margin-bottom:16px; }
+  .ev { background:#fff; border-radius:16px; padding:16px 18px; margin-bottom:12px; box-shadow:0 2px 10px rgba(29,26,36,.06); border-left:4px solid var(--gold); }
+  .ev.main-ev { border-left-color:var(--pink); }
+  .when { font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+  .ev h3 { font-size:20px; margin:4px 0 4px; }
+  .where { font-size:15px; line-height:1.4; }
+  .map { display:inline-block; margin-top:10px; font-size:14px; font-weight:700; color:var(--pink); text-decoration:none; }
+  .map::before { content:"\1F4CD  "; }
   .note { margin-top:30px; font-size:15px; line-height:1.55; color:var(--muted); }
   footer { margin-top:auto; padding-top:34px; font-size:12px; color:#a59fab; }
 </style>
@@ -72,6 +81,28 @@
     Follow our wedding story
   </a>
   <p class="handle">@shauryaxgeet on Instagram</p>
+
+  <section class="events" aria-label="Wedding events">
+    <h2>Celebrations</h2>
+    <article class="ev">
+      <p class="when">Friday, 11 December 2026</p>
+      <h3>Haldi &amp; Mehandi</h3>
+      <p class="where">Agrawal Dharmshala, Kali Mandir Road, Chandausi</p>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Agrawal+Dharmshala+Kali+Mandir+Road+Chandausi">Open in Maps</a>
+    </article>
+    <article class="ev main-ev">
+      <p class="when">Sunday, 13 December 2026</p>
+      <h3>Wedding</h3>
+      <p class="where">Manglam Resort, Mathura</p>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Manglam+Resort+Mathura">Open in Maps</a>
+    </article>
+    <article class="ev">
+      <p class="when">Wednesday, 16 December 2026</p>
+      <h3>Reception</h3>
+      <p class="where">Annapoorna Utsav Mandap, Station Road, Chandausi</p>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Annapoorna+Utsav+Mandap+Station+Road+Chandausi">Open in Maps</a>
+    </article>
+  </section>
 
   <p class="note">Thank you for being part of our journey.<br>We can't wait to celebrate with you.</p>
 </main>
