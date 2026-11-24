@@ -11,6 +11,23 @@
 <meta property="og:url" content="https://shauryaxgeet.github.io/">
 <meta name="theme-color" content="#fff8ef">
 <link rel="icon" href="couple.jpg">
+<!-- Google Analytics 4. A QR code that opens /?qr is attributed as source "qr" / medium "qr_code". -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NWN1638X5P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  (function () {
+    const u = new URL(location.href);
+    if (u.searchParams.has('qr') && !u.searchParams.has('utm_source')) {
+      u.searchParams.delete('qr');
+      u.searchParams.set('utm_source', 'qr');
+      u.searchParams.set('utm_medium', 'qr_code');
+      u.searchParams.set('utm_campaign', 'wedding_countdown');
+    }
+    gtag('config', 'G-NWN1638X5P', { page_location: u.href });
+  })();
+</script>
 <style>
   :root { --gold:#E8B23C; --pink:#F06292; --ink:#1d1a24; --muted:#6b6472; --bg:#fff8ef; }
   * { box-sizing:border-box; margin:0; }
@@ -119,6 +136,18 @@
     el('m').textContent = Math.floor(s % 3600 / 60);
   }
   tick(); setInterval(tick, 30000);
+</script>
+<script>
+  // Analytics only: report link taps, never block or alter navigation.
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a');
+    if (!a) return;
+    if (a.classList.contains('insta')) {
+      gtag('event', 'follow_instagram_click', { link_url: a.href });
+    } else if (a.classList.contains('map')) {
+      gtag('event', 'map_click', { celebration: a.closest('.ev').querySelector('h3').textContent, link_url: a.href });
+    }
+  });
 </script>
 </body>
 </html>
